@@ -9,10 +9,15 @@ chmod +x *.sh
 
 
 InstallCSpect.sh
-This will do the following :
 
 1. Install any packages that are required by CSpect.
-2. Find the lstest and greatest build of CSpect and install it in you home/CSpect folder
-3. Get the latest SDCard zip (2gb version) and put it home/SpectSD folder and unzip it
+2. Find the latest build of CSpect and unzip it in your home/CSpect folder
+3. Get the latest SDCard zip (2gb version) and unzip it in your home/SpectSD folder
 4. Copy the required .rom files from the SDCard folder into the CSpect folder
 5. Create a boot.sh script in the home/CSpect folder which will boot up CSpect with the SDCard image.
+6. Gets the online ZX Spectrum Next manual pdf
+
+InstallVSCode.sh
+
+1. Install VSCode
+2. Install the nextbasic plugin by remysharp
