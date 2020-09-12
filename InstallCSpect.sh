@@ -1,25 +1,26 @@
-# install required packages
-#  mono required to run CSpect
-#  libopenall required for sounds in CSpect
+# install CSpect
+# - mono
 
+sudo apt-get -y install wine
 sudo apt-get -y install mono-devel
 sudo apt-get -y install libopenal1
 
-# CSpect
+# - CSpect
+# only install if not already installed
+# - CSpect
 # only install if not already installed
 if ! [ -d "~/CSpect" ]; then
     mkdir ~/CSpect
 
-    # Assume the home page has a link 
-    curl https://dailly.blogspot.com/ | grep -Eo -m1 "\bhref=\"(.*\/CSpect.*.zip)" | grep -Eo "http.*.zip" > CSpectFilename.txt
+    curl http://dailly.blogspot.com | grep -Eo -m1 "\bhref=\"(.*\/CSpect.*.zip)" | grep -Eo "http.*.zip" > CSpectFilename.txt
     wget -i CSpectFilename.txt -O ~/CSpectLatest.zip
 
     unzip ~/CSpectLatest.zip -d ~/CSpect/
 fi
 
-# lets add a boot script in the cspect folder to boot up a Spectrum Next
-echo mono CSpect.exe -zxnext -nextrom -esc -basickeys -r -vsync -mmc=../SpectSD/cspect-next-2gb.img >> ~/CSpect/boot.sh
-chmod +x ~/CSpect/boot.sh
+# lets add a boot script in the cspect folder
+echo mono CSpect.exe -zxnext -nextrom -esc -basickeys -r -vsync -mmc=../SpectSD/cspect-next-2gb.img >> ~/CSpect/boot
+chmod +x ~/CSpect/boot
 
 # - SD Card Image
 # only install if not already installed
@@ -32,6 +33,12 @@ if ! [ -d "~/SpectSD" ]; then
     # unzip it directly into the CSpect folder
     unzip ~/SpectSD/cspect-next-2gb.zip -d ~/SpectSD/
 
-    # don't forget we need to copy the rom files into the CSpect folder
-    cp ~/SpectSD/*.rom ~/CSpect/
+    cp ~/SpectSD/*.rom ~/CSpect
 fi
+
+# Lets grab the manual and put it in the home folder
+wget  -P ~/ "http://www.specnext.com/wp-content/uploads/2020/02/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z"
+
+# unzip it directly into the CSpect folder
+7z x ~/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z
+
