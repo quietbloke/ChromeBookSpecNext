@@ -19,8 +19,8 @@ if ! [ -d "~/CSpect" ]; then
 fi
 
 # lets add a boot script in the cspect folder
-echo mono CSpect.exe -zxnext -nextrom -esc -basickeys -r -vsync -mmc=../SpectSD/cspect-next-2gb.img >> ~/CSpect/boot
-chmod +x ~/CSpect/boot
+echo mono CSpect.exe -zxnext -nextrom -esc -basickeys -r -vsync -mmc=../SpectSD/cspect-next-2gb.img >> ~/CSpect/boot.sh
+chmod +x ~/CSpect/boot.sh
 
 # - SD Card Image
 # only install if not already installed
@@ -40,5 +40,5 @@ fi
 wget  -P ~/ "http://www.specnext.com/wp-content/uploads/2020/02/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z"
 
 # unzip it directly into the CSpect folder
-7z x ~/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z
-
+sudo apt-get -y install p7zip
+p7zip -d ~/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z
