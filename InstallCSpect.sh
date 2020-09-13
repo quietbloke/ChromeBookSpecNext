@@ -39,6 +39,8 @@ fi
 # Lets grab the manual and put it in the home folder
 wget  -P ~/ "http://www.specnext.com/wp-content/uploads/2020/02/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z"
 
-# unzip it directly into the CSpect folder
-sudo apt-get -y install p7zip
-p7zip -d ~/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z
+# unzip it directly into the home folder
+sudo apt-get -y install p7zip-full
+7z x ~/ZX-Spectrum-Next-Manual-Color-ONLINE-Edition.7z
+mv ZX-Spectrum-Next-Manual-Color-ONLINE-Edition ~/
+
