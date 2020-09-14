@@ -13,14 +13,14 @@ code --install-extension remysharp.nextbasic
 
 # see if we can setup the plugin with the paths the tool needs
 
-# For new print instructions on what settings to set for the plugin
+cd ~
+# For now just print instructions on what the settings are for the plugin
 echo ============================================================
-echo Copy/Paste the following values for the remysharp.nextbasic plugin
+echo Copy/Paste the following values in the remysharp.nextbasic plugin configuration
 echo
 echo CSpect path
-echo $(pwd)+CSpect/CSpect.exe
+echo $(pwd)/CSpect/CSpect.exe
 echo
 echo Image path
-echo $(pwd)+SpectSD/cspect-next-2gb.img
+echo $(pwd)/SpectSD/cspect-next-2gb.img
 echo ============================================================
-
