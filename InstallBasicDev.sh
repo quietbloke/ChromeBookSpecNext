@@ -5,7 +5,7 @@ mkdir ~/code/next/basic
 
 # supply a simple example basic app
 mkdir ~/code/next/basic/hello
-echo PRINT "10 Hello World!" >> ~/code/next/basic/hello/hello.bas.txt
+echo 10 PRINT "Hello World!" >> ~/code/next/basic/hello/hello.bas.txt
 
 # Need the build essential package
 sudo apt-get -y install build-essential
