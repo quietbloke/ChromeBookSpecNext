@@ -12,3 +12,15 @@ sudo apt-get --assume-yes install code
 code --install-extension remysharp.nextbasic
 
 # see if we can setup the plugin with the paths the tool needs
+
+# For new print instructions on what settings to set for the plugin
+echo ============================================================
+echo Copy/Paste the following values for the remysharp.nextbasic plugin
+echo
+echo CSpect path
+echo $(pwd)+CSpect/CSpect.exe
+echo
+echo Image path
+echo $(pwd)+SpectSD/cspect-next-2gb.img
+echo ============================================================
+
