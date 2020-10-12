@@ -29,8 +29,12 @@ chmod +x *.sh
 NOTE : When this script ends it will show the values you need to enter for the CSpect path and the image path in the NextBasic Plugin Configuration.
 In order for the plugin to deploy the scripts and run in CSpect you will also need to run the InstallBasicDev script.
 
-**./InstallBasicDev**
+**./InstallBasicDev.sh**
 
 1. Install hdfmokey
 2. Install txt2bas
 3. Creates a simple hello world basic project in ~/code/next/basic/hello/ to allow you to test the plugin is working.
+
+**./Installz88dk.sh**
+
+1. Install z88dk
