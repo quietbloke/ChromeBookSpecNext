@@ -38,3 +38,7 @@ In order for the plugin to deploy the scripts and run in CSpect you will also ne
 **./Installz88dk.sh**
 
 1. Install z88dk
+
+**./InstallSpecTools.sh**
+
+TODO : Install various useful tools for graphics sounds etc
